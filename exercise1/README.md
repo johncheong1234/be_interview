@@ -1,5 +1,3 @@
-Here's a `README.md` file with all the compilation and run commands in one block for easy copying:
-
 ```markdown
 # Java 21 Exercises
 

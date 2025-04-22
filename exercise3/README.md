@@ -3,16 +3,6 @@
 
 This repository contains solutions to four Python exercises focusing on Flask API development, data processing, external API interaction, and database ORM concepts.
 
-## Folder Structure
-```
-exercise3/
-├── app.py         # Solution for Exercise 3.1 (Flask API)
-├── data_processing.py # Solution for Exercise 3.2 (Data Processing)
-├── external_api.py  # Solution for Exercise 3.3 (External API)
-├── models.py        # Solution for Exercise 3.4 (SQLAlchemy ORM)
-└── README.md      # This documentation file
-```
-
 ## Exercise Solutions
 
 ### 3.1 Simple API with Flask (`app.py`)
