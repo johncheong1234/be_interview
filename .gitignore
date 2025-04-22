@@ -1,0 +1,110 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to have folders created for them and ignore everything inside
+# but if you do need to ignore these files specifically, do it like this:
+# *.[Pp]ackage.[Dd]ependencies
+# **/*.[Pp]ackage.[Dd]ependencies
+# **/*packages.config
+# **/*.project.json
+# **/*.lock.json
+# packages/
+# node_modules/
+# bower_components/
+jspm_packages/
+web_modules/
+
+# Logs and temp files #
+######################
+*.log
+*.tmp
+*.swp
+*.bak
+*.asv
+*.DS_Store
+._*
+npm-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+.Spotlight-V100
+.Trashes
+\$RECYCLE.BIN/
+.fseventsd
+
+# Tool-specific files #
+#######################
+.vscode/
+.idea/
+.project
+.settings
+*.iml
+*.ipr
+*.iws
+out/
+target/
+blib/
+.gradle
+.maven
+dist/
+build/
+develop/
+tmp/
+cache/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.tox/
+.coverage
+.env
+.venv
+env/
+venv/
+node_modules/
+
+# Editor backups #
+#################
+*~
+\#*\#
+.*.swp
+.swo
+.vimrc.swp
+
+# Various environment-specific files #
+#####################################
+.history
+*.pid
+*.seed
+*.log
+*.stats
+dump.rdb
+dump.sql
+*.sqlite
+*.sqlite-*
+
+# Deployment files #
+####################
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Ignore files that might contain sensitive information #
+#######################################################
+config/database.yml
+config/secrets.yml
+.env*
