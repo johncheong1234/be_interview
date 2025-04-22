@@ -1,0 +1,17 @@
+service:
+  enabled: true
+
+extraEnvVars:
+  - name: "VAR1"
+    value: "VAL1"
+  - name: "VAR2"
+    value: "VAL2"
+
+postgresql:
+  auth:
+    username: myuser
+    password: mypass
+    database: mydb
+  primary:
+    service:
+      type: ClusterIP

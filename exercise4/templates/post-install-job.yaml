@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+`etadata:
+  name: post-install-job
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "0"
+    "helm.sh/hook-delete-policy": hook-succeeded
+spec:
+  template:
+    spec:
+      containers:
+        - name: notify
+          image: busybox
+          command: ["/bin/sh", "-c"]
+          args: ["echo 'Installation of {{ .Release.Name }} is complete!'"]
+      restartPolicy: Never

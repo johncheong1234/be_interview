@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "my-app.fullname" . }}
+  labels:
+    {{ include "my-app.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{ include "my-app.labels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{ include "my-app.labels" . | nindent 8 }}
+    spec:
+      containers:
+        - name: my-app-container
+          image: nginx
+          ports:
+            - containerPort: 80
+              name: http
+          env:
+            - name: DB_HOST
+              value: {{ printf "%s-postgresql" .Release.Name }}
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ printf "%s-postgresql" .Release.Name }}
+                  key: username
+            {{- range .Values.extraEnvVars }}
+            - name: {{ .name }}
+              value: {{ .value | quote }}
+            {{- end }}
